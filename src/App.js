@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // =============:
 import Home from "./pages/Home.js";
 import Contact from "./pages/Contact.js";
+import Portfolio from "./pages/Portfolio.js";
 
 // Components;
 // =============:
@@ -21,6 +22,7 @@ function App() {
 				<Route exact path="/" component={Home} />
 				<Route exact path="/home" component={Home} />
 				<Route exact path="/contact" component={Contact} />
+				<Route exact path="/portfolio" component={Portfolio} />
 				<PortfolioFooter />
 			</div>
 		</Router>

@@ -3,18 +3,28 @@ import "./style.css";
 
 // Components;
 // =============:
-import { Nav } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
 
-function PortfolioFooter() {
+function Project({ project: { title, src, desc, repo, active } }) {
+	const repoName = repo.split("/").pop();
 	return (
-		<Nav className="pageFooter bg-dark justify-content-center">
-			<Nav.Item>
-				<a className="foot" href="https://github.com/rrrossettiii">
-					© rrrossettiii 2020
-				</a>
-			</Nav.Item>
-		</Nav>
+		<Col md={3}>
+			<Card>
+				<Card.Body>
+					<Card.Img variant="top" src={src} />
+					<Card.Title>
+						<a href={active}>{title}</a>
+					</Card.Title>
+					<Card.Text>{desc}</Card.Text>
+					<hr />
+					<Card.Text>
+						Repo:
+						<a href={repo}> {repoName}</a>
+					</Card.Text>
+				</Card.Body>
+			</Card>
+		</Col>
 	);
 }
 
-export default PortfolioFooter;
+export default Project;
