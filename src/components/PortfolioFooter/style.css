@@ -1,0 +1,13 @@
+.pageFooter {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.foot {
+    color: dimgrey;
+}
+
+.foot:hover {
+    color: red;
+}
